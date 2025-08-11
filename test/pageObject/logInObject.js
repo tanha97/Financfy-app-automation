@@ -11,7 +11,7 @@ class LogIn {
   get dateFilter() {
     return $('~All Time')
   }
-  get ForgotPassword(){
+  get forgotPassword(){
     return $('~Forgot Password?')
   }
   get MobileNo(){
@@ -20,7 +20,7 @@ class LogIn {
   get SendOTP() {
     return $('~Send OTP')
   }
-  get OTPField() {
+  get otpField() {
     return driver.$('(//android.widget.EditText)[1]')
   }
   get Verify() {

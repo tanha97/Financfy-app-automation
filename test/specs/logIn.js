@@ -27,15 +27,15 @@ describe('Log In Page', () => {
     await expect(SignUp.WelcomeText).toBeDisplayed()
     await SignUp.MobileNumber.click()
     await SignUp.MobileNumber.addValue('01500000000')
-    await LogIn.Password.click()
-    await LogIn.Password.addValue('A12345678a')
+    await LogIn.password.click()
+    await LogIn.password.addValue('A12345678a')
     await LogIn.LogInText.click()
-    await expect(LogIn.DateFilter).toBeDisplayed()
+    await expect(LogIn.dateFilter).toBeDisplayed()
   })
 
   xit('Forgot Password', async () => {
     await LogIn.LogInText.click()
-    await LogIn.ForgotPassword.click()
+    await LogIn.forgotPassword.click()
     await expect(LogIn.ForgotPassword).toBeDisplayed()
     await LogIn.MobileNo.click()
     await LogIn.MobileNo.addValue('01500000000')
@@ -51,7 +51,7 @@ describe('Log In Page', () => {
     await expect(LogIn.ResetPassword).toBeDisplayed()
     let password = SignUp.MobileNumber
     await password.addValue('A123456a')
-    await LogIn.Password.addValue('A123456a')
+    await LogIn.password.addValue('A123456a')
     await LogIn.Save.click()
     await expect(LogIn.PasswordResetSuccessful).toBeDisplayed()
   })
