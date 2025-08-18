@@ -11,6 +11,7 @@
     "allure-commandline": "^2.34.0",
     "appium": "^2.13.1",
     "appium-uiautomator2-driver": "^3.10.0",
+    "mochawesome": "^7.1.3",
     "wdio-image-comparison-service": "^5.0.3"
   },
   "scripts": {
@@ -18,7 +19,8 @@
     "figma:baseline": "node ./test/downloadFigmaFrame.js",
     "appium:test": "wdio run wdio.conf.js",
     "visual:compare": "node compareImages.js",
-    "test:visual": "npm run figma:baseline && npm run appium:test && npm run visual:compare"
+    "test:visual": "npm run figma:baseline && npm run appium:test && npm run visual:compare",
+    "test":"mocha test/**/*.js --reporter mochawesome"
   },
   "dependencies": {
     "node-fetch": "^2.7.0",
